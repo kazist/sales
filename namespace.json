@@ -1,0 +1,18 @@
+{
+    "SalesReceipts": {
+        "namespace": "Sales\\Receipts",
+        "controller": "ReceiptsController"
+    },
+    "SalesReceiptsProducts": {
+        "namespace": "Sales\\Receipts\\Products",
+        "controller": "ProductsController"
+    },
+    "SalesPaymethods": {
+        "namespace": "Sales\\Paymethods",
+        "controller": "PaymethodsController"
+    },
+    "SalesCustomers": {
+        "namespace": "Sales\\Customers",
+        "controller": "CustomersController"
+    }
+}
