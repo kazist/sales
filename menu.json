@@ -1,0 +1,28 @@
+{
+    "title": "Sales",
+    "description": "Sales",
+    "alias": "sales",
+    "icon": "fa fa-shopping-basket",
+    "home_link": "sales\/receipts",
+    "path": "applications/Sales",
+    "is_core": "1",
+    "menulist": [{
+            "title": "Receipts",
+            "alias": "admin_sales_receipts",
+            "url": "admin/sales/receipts",
+            "icon": "fa fa-file",
+            "children": []
+        }, {
+            "title": "Customers",
+            "alias": "admin_sales_customers",
+            "url": "admin/sales/customers",
+            "icon": "fa fa-users",
+            "children": []
+        }, {
+            "title": "Payment Methods",
+            "alias": "admin_sales_paymethods",
+            "url": "admin/sales/paymethods",
+            "icon": "fa fa-credit-card",
+            "children": []
+        }]
+}
