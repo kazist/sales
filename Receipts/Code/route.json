@@ -1,0 +1,125 @@
+{
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Sales\\Receipts\\Code\\Controllers\\Admin\\ReceiptsController::taskAction",
+            "unique_name": "admin.sales.receipts.task",
+            "route": "admin/sales/receipts/task",
+            "permissions": "can_write",
+            "arguments": "",
+            "keywords": "receipts, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_write"],
+                "ADMIN": ["can_write"]
+            }
+        }, {
+            "title": "Receipt List",
+            "description": "Management of Receipts.",
+            "controller": "Sales\\Receipts\\Code\\Controllers\\Admin\\ReceiptsController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.sales.receipts",
+            "route": "admin/sales/receipts",
+            "arguments": "",
+            "keywords": "receipt, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Receipt  ",
+            "description": "Add Receipt .",
+            "controller": "Sales\\Receipts\\Code\\Controllers\\Admin\\ReceiptsController::addAction",
+            "unique_name": "admin.sales.receipts.add",
+            "route": "admin/sales/receipts/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "receipt, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Receipt {{ item.name }}",
+            "description": "Edit Receipt {{ item.name }}.",
+            "controller": "Sales\\Receipts\\Code\\Controllers\\Admin\\ReceiptsController::editAction",
+            "unique_name": "admin.sales.receipts.edit",
+            "route": "admin/sales/receipts/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "receipt, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Receipt Detail: {{ item.name }}",
+            "description": "Receipt Detail: {{ item.name }}",
+            "controller": "Sales\\Receipts\\Code\\Controllers\\Admin\\ReceiptsController::detailAction",
+            "unique_name": "admin.sales.receipts.detail",
+            "route": "admin/sales/receipts/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "receipt, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"],
+                "MODERATOR": ["can_view", "can_viewown"],
+                "USER": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Receipt Delete: {{ item.name }}",
+            "description": "Receipt Delete: {{ item.name }}",
+            "controller": "Sales\\Receipts\\Code\\Controllers\\Admin\\ReceiptsController::deleteAction",
+            "unique_name": "admin.sales.receipts.delete",
+            "route": "admin/sales/receipts/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "receipt, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Receipt Save: {{ item.name }}",
+            "description": "Receipt Save: {{ item.name }}",
+            "controller": "Sales\\Receipts\\Code\\Controllers\\Admin\\ReceiptsController::saveAction",
+            "unique_name": "admin.sales.receipts.save",
+            "route": "admin/sales/receipts/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "receipt, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	
